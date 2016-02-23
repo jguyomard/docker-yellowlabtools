@@ -10,13 +10,13 @@ Yellow Lab Tools Docker is a node:0.12.10 (Jessie) Docker image that provides an
 
 Use:
 ```
-docker run -d --rm -p 8383:8383 jguyomard/yellowlabtools
+docker run --rm -p 8383:8383 jguyomard/yellowlabtools
 ```
 
 or run as a background daemon:
 
 ```
-docker run -d --rm -p 8383:8383 jguyomard/yellowlabtools
+docker run -d -p 8383:8383 jguyomard/yellowlabtools
 ```
 
 Then open http://localhost:8383/ in your browser.
