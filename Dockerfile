@@ -1,9 +1,16 @@
 FROM    node:0.12.10
 
-ENV     VERSION=master
+# This will be cached across builds (making builds faster)
 RUN     mkdir -p /usr/src/ylt \
         && cd /usr/src/ylt \
-        && git clone https://github.com/gmetais/YellowLabTools.git . -b ${VERSION} \
+        && git clone https://github.com/gmetais/YellowLabTools.git . \
+        && npm install
+
+# Only changes will be fetched/installed
+ENV     VERSION=master
+RUN     cd /usr/src/ylt \
+        && git fetch \
+        && git checkout ${VERSION} \
         && git status \
         && npm install
 
