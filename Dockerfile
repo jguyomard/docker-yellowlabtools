@@ -11,7 +11,8 @@ RUN     mkdir -p /usr/src/ylt \
         && npm install
 
 # Only changes will be fetched/installed
-ENV     VERSION=master # commit 9d58dc2
+# last commit=9d58dc2
+ENV     VERSION=master
 RUN     cd /usr/src/ylt \
         && git fetch \
         && git checkout ${VERSION} \
