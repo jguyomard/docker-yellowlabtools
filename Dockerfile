@@ -11,7 +11,7 @@ RUN     mkdir -p /usr/src/ylt \
         && npm install
 
 # Only changes will be fetched/installed
-# last commit=9d58dc2
+# last commit=aed1685
 ENV     VERSION=master
 RUN     cd /usr/src/ylt \
         && git fetch \
@@ -19,7 +19,7 @@ RUN     cd /usr/src/ylt \
         && npm install \
         && grunt build
 
-WORKDIR /usr/src/ylt     	
+WORKDIR /usr/src/ylt
 
 EXPOSE  8383
 
