@@ -12,7 +12,7 @@ RUN     mkdir -p /usr/src/ylt \
 
 # Only changes will be fetched/installed
 # last commit=v1.11
-ENV     VERSION=master
+ENV     VERSION=v1.11
 RUN     cd /usr/src/ylt \
         && git fetch \
         && git checkout ${VERSION} \
