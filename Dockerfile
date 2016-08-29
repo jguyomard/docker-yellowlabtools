@@ -1,4 +1,4 @@
-FROM    node:0.12.10
+FROM    node:4.5
 
 RUN     npm install -g npm@latest \
         && npm install -g node-gyp \
