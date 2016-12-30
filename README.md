@@ -25,7 +25,9 @@ Then open [`http://localhost:8383/`](http://localhost:8383/) in your browser.
 ## Supported tags
 
 * [`latest`](https://github.com/jguyomard/docker-yellowlabtools/blob/master/Dockerfile) ;
-* [`1.10`, `1`](https://github.com/jguyomard/docker-yellowlabtools/blob/v1.10/Dockerfile) ;
+* [`1.12`, `1`](https://github.com/jguyomard/docker-yellowlabtools/blob/v1.12.0/Dockerfile) ;
+* [`1.11`](https://github.com/jguyomard/docker-yellowlabtools/blob/v1.11.0/Dockerfile) ;
+* [`1.10`](https://github.com/jguyomard/docker-yellowlabtools/blob/v1.10/Dockerfile) ;
 * [`1.9.0`, `1.9`](https://github.com/jguyomard/docker-yellowlabtools/blob/v1.9.0/Dockerfile) ;
 * [`1.8.0`, `1.8`](https://github.com/jguyomard/docker-yellowlabtools/blob/v1.8.0/Dockerfile).
  

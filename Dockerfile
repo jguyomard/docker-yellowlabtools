@@ -1,25 +1,16 @@
 FROM    node:4.5
 
-RUN     npm install -g npm@latest \
-        && npm install -g node-gyp \
-        && npm install -g grunt-cli
-
-# This will be cached across builds (making builds faster)
-RUN     mkdir -p /usr/src/ylt \
-        && cd /usr/src/ylt \
-        && git clone https://github.com/gmetais/YellowLabTools.git . \
-        && npm install
-
-# Only changes will be fetched/installed
-# last commit=v1.11
+# last commit=v1.12.0
 ENV     VERSION=master
-RUN     cd /usr/src/ylt \
-        && git fetch \
-        && git checkout ${VERSION} \
-        && npm install \
-        && grunt build
 
 WORKDIR /usr/src/ylt
+
+RUN     npm install -g npm@latest \
+        && npm install -g node-gyp \
+        && npm install -g grunt-cli \
+        && git clone https://github.com/gmetais/YellowLabTools.git -b ${VERSION} . \
+        && npm install \
+        && grunt build
 
 EXPOSE  8383
 
